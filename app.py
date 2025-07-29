@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
-from ai_helper import generate_health_tips
+from ai_healthtips import generate_health_tips
 
 with open('diabetes_model.pkl', 'rb') as f:
     data = pickle.load(f)
@@ -94,6 +94,6 @@ with right:
             with st.spinner("Generating personalized tips..."):
                 tips = generate_health_tips(input_data, prediction)
                 st.markdown("### 🧠 AI-Generated Health Tips:")
-                st.success(tips)
+                st.warning(tips)
 
         st.markdown("</div>", unsafe_allow_html=True)
