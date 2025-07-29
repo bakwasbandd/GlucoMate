@@ -17,7 +17,6 @@ st.subheader("")
 left, right = st.columns(2)
 
 with left:
-    # Sticky note styled container
     st.markdown(
         """
         <div style="
@@ -63,50 +62,20 @@ with right:
         unsafe_allow_html=True
     )
     st.subheader("")
-    # if st.button("Predict Diabetes Risk"):
-    #     input_data = np.array(
-    #         [[pregnancies, glucose, bp, skin, insulin, bmi, dpf, age]])
-    #     input_scaled = scaler.transform(input_data)
-    #     prediction = model.predict(input_scaled)[0]
-    #     confidence = model.predict_proba(input_scaled)[0][prediction]
-
-    #     if prediction == 1:
-    #         st.error("⚠️ The model predicts you **may have diabetes** !!")
-    #         st.write("")
-    #         st.metric("Confidence", f"{confidence*100:.2f}%")
-    #         st.markdown("---")
-    #         st.info("💡 Want personalized tips on maintaining healthy glucose levels from our AI assistant using your medical info?")
-    #         if st.button("📌 Show Health Tips"):
-    #             with st.spinner("Generating personalized tips..."):
-    #                 tips = generate_health_tips(input_data, prediction)
-    #                 st.markdown("### 🧠 AI-Generated Health Tips:")
-    #                 st.success(tips)
-
-    #     else:
-    #         st.success("✅ The model predicts you **do not have diabetes** !!")
-    #         st.write("")
-    #         st.metric("🎯 Confidence", f"{confidence*100:.2f}%")
-    #         st.markdown("---")
-    #         st.info("💡 Want personalized tips on maintaining healthy glucose levels from our AI assistant using your medical info?")
-    #         if st.button("📌 Show Health Tips"):
-    #             with st.spinner("Generating personalized tips..."):
-    #                 tips = generate_health_tips(input_data, prediction)
-    #                 st.markdown("### 🧠 AI-Generated Health Tips:")
-    #                 st.success(tips)
 
     if st.button("Predict Diabetes Risk"):
-            input_data = np.array(
-                [[pregnancies, glucose, bp, skin, insulin, bmi, dpf, age]])
-            input_scaled = scaler.transform(input_data)
-            prediction = model.predict(input_scaled)[0]
-            confidence = model.predict_proba(input_scaled)[0][prediction]
+        input_data = np.array(
+            [[pregnancies, glucose, bp, skin, insulin, bmi, dpf, age]])
+        input_scaled = scaler.transform(input_data)
+        prediction = model.predict(input_scaled)[0]
+        confidence = model.predict_proba(input_scaled)[0][prediction]
 
-            # Store in session state
-            st.session_state['input_data'] = input_data
-            st.session_state['prediction'] = prediction
-            st.session_state['confidence'] = confidence
+        # Store in session state
+        st.session_state['input_data'] = input_data
+        st.session_state['prediction'] = prediction
+        st.session_state['confidence'] = confidence
 
-            # Show prediction if available
+        # Show prediction if available
     if 'prediction' in st.session_state and 'input_data' in st.session_state:
         prediction = st.session_state['prediction']
         input_data = st.session_state['input_data']
@@ -128,4 +97,3 @@ with right:
                 st.success(tips)
 
         st.markdown("</div>", unsafe_allow_html=True)
-            
