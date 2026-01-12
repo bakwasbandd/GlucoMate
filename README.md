@@ -79,22 +79,30 @@ Tips are:
 
 ---
 
+## ⚠️ Disclaimer
+This application is for educational purposes only.
+It does not replace professional medical diagnosis or treatment.
+Always consult a qualified healthcare provider.
+
+---
+
 ## ▶️ How to Run the App
 
 ### 1) Install Dependencies
 ```bash
 pip install streamlit numpy pandas scikit-learn cohere
 
-### 2) Add your Cohere API key in ai_helper.py:
+ 2) Add your Cohere API key in ai_helper.py:
 import cohere
 co = cohere.Client("YOUR_COHERE_API_KEY")
 
-### 3) Run the Streamlit App
+ 3) Run the Streamlit App
 streamlit run app.py
 
 ---
 
-## ⚠️ Disclaimer
-This application is for educational purposes only.
-It does not replace professional medical diagnosis or treatment.
-Always consult a qualified healthcare provider.⚠️ Disclaimer
+📸 App Screenshot
+
+<img src="imgs/ui.png" alt="GlucoMate App Screenshot" width="800">
+
+
