@@ -86,8 +86,6 @@ Always consult a qualified healthcare provider.
 
 ---
 
-### 📸 App Screenshot
-
 <img src="imgs/ui.png" alt="GlucoMate App Screenshot" width="800">
 
 ---
