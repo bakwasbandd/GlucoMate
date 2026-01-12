@@ -86,6 +86,12 @@ Always consult a qualified healthcare provider.
 
 ---
 
+### 📸 App Screenshot
+
+<img src="imgs/ui.png" alt="GlucoMate App Screenshot" width="800">
+
+---
+
 ## ▶️ How to Run the App
 
 ### 1) Install Dependencies
@@ -99,10 +105,8 @@ co = cohere.Client("YOUR_COHERE_API_KEY")
  3) Run the Streamlit App
 streamlit run app.py
 
+
 ---
 
-📸 App Screenshot
-
-<img src="imgs/ui.png" alt="GlucoMate App Screenshot" width="800">
 
 
